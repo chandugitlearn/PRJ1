@@ -11,14 +11,14 @@ terraform {
 provider "azurerm" {
   features {}
   subscription_id = "814a6f81-6ab7-4140-8ff6-e6fef6646c56"
-  client_id       = "5f693dad-0133-4d65-b8bb-8f8627351f8b"
-  client_secret   = "3zm8Q~rP9oZkHIVy4427M2KYx3I4lYa6N8ZEhaj-"
+  client_id       = "bfb85078-f61e-4340-8f09-ab22dc565d5a"
+  client_secret   = "bER8Q~nMDmgTaUmLukjgZVCH2Eoyq56hryiqYckR"
   tenant_id       = "0da89a2e-87cd-4bef-b66a-04cd1289305a"
 
 }
 
  resource "azurerm_resource_group" "azurerm" {
-  name     = "Terraform"
+  name     = "ncpl"
   location = "east US"
 }
 resource "azurerm_virtual_network" "vnet" {
