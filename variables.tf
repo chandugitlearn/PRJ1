@@ -1,21 +1,21 @@
 # Service Principal Variables
 
 variable "client_id" {
-    description =   "89d2feb5-8358-4c67-8693-f3e5c97f4cd0"
+    description =   "5f693dad-0133-4d65-b8bb-8f8627351f8b"
     type        =   string
 }
 
 variable "client_secret" {
-    description =   ".BF8Q~etJ~dbuHD2JJemkqFbor.T5CQNCHnh1ail"
+    description =   "3zm8Q~rP9oZkHIVy4427M2KYx3I4lYa6N8ZEhaj-"
     type        =   string
 }
 
 variable "subscription_id" {
-    description =   "321f31e2-7fb6-48d9-aa03-234a4ecaf9ca"
+    description =   "814a6f81-6ab7-4140-8ff6-e6fef6646c56"
     type        =   string
 }
 
 variable "tenant_id" {
-    description =   "3d83ab06-3c39-47e5-8d08-533b0bfdec20"
+    description =   "0da89a2e-87cd-4bef-b66a-04cd1289305a"
     type        =   string
 }
