@@ -18,7 +18,7 @@ provider "azurerm" {
 }
 
  resource "azurerm_resource_group" "azurerm" {
-  name     = "ncpl"
+  name     = "ncpljenkins"
   location = "east US"
 }
 resource "azurerm_virtual_network" "vnet" {
