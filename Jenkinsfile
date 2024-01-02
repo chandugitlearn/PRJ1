@@ -9,9 +9,10 @@ pipeline{
         PATH = "$TF_HOME:$PATH"
     }
     stages {
-       stage('Checkout') {
+       stage('Hello') {
             steps {
-                   checkout scmGit(branches: [[name: '*/main']], browser: github('https://github.com/chandugitlearn/PRJ1.git'), extensions: [], userRemoteConfigs: [[url: 'https://github.com/chandugitlearn/PRJ1.git']]) 
+               sh label: '', script: '''#!/bin/bash
+                   echo "hello world" 
                 '''
             }
         }
