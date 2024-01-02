@@ -9,10 +9,10 @@ pipeline{
         PATH = "$TF_HOME:$PATH"
     }
     stages {
-       stage('Hello') {
+       stage('Checkout') {
             steps {
                sh label: '', script: '''#!/bin/bash
-                   echo "hello world" 
+                   checkout scmGit(branches: [[name: '*/main']], browser: github('https://github.com/chandugitlearn/PRJ1.git'), extensions: [], userRemoteConfigs: [[url: 'https://github.com/chandugitlearn/PRJ1.git']]) 
                 '''
             }
         }
@@ -22,12 +22,12 @@ pipeline{
             steps {
                     ansiColor('xterm') {
                     withCredentials([azureServicePrincipal(
-                    credentialsId: 'Azure',
+                    credentialsId: 'TASP',
                     subscriptionIdVariable: 'ARM_SUBSCRIPTION_ID',
                     clientIdVariable: 'ARM_CLIENT_ID',
                     clientSecretVariable: 'ARM_CLIENT_SECRET',
                     tenantIdVariable: 'ARM_TENANT_ID'
-                ), string(credentialsId: 'access_key', variable: 'ARM_ACCESS_KEY')]) {
+                ), string(credentialsId: 'prj1st1', variable: 'ARM_ACCESS_KEY')]) {
                         
                         sh """
                                 
@@ -44,12 +44,12 @@ pipeline{
             steps {
                     ansiColor('xterm') {
                     withCredentials([azureServicePrincipal(
-                    credentialsId: 'Azure',
+                    credentialsId: 'TASP',
                     subscriptionIdVariable: 'ARM_SUBSCRIPTION_ID',
                     clientIdVariable: 'ARM_CLIENT_ID',
                     clientSecretVariable: 'ARM_CLIENT_SECRET',
                     tenantIdVariable: 'ARM_TENANT_ID'
-                ), string(credentialsId: 'access_key', variable: 'ARM_ACCESS_KEY')]) {
+                ), string(credentialsId: 'prj1st1', variable: 'ARM_ACCESS_KEY')]) {
                         
                         sh """
                                 
@@ -65,12 +65,12 @@ pipeline{
 
                     ansiColor('xterm') {
                     withCredentials([azureServicePrincipal(
-                    credentialsId: 'Azure',
+                    credentialsId: 'TASP',
                     subscriptionIdVariable: 'ARM_SUBSCRIPTION_ID',
                     clientIdVariable: 'ARM_CLIENT_ID',
                     clientSecretVariable: 'ARM_CLIENT_SECRET',
                     tenantIdVariable: 'ARM_TENANT_ID'
-                ), string(credentialsId: 'access_key', variable: 'ARM_ACCESS_KEY')]) {
+                ), string(credentialsId: 'prj1st1', variable: 'ARM_ACCESS_KEY')]) {
                         
                         sh """
                         
@@ -96,12 +96,12 @@ pipeline{
             steps {
                     ansiColor('xterm') {
                     withCredentials([azureServicePrincipal(
-                    credentialsId: 'Azure',
+                    credentialsId: 'TASP',
                     subscriptionIdVariable: 'ARM_SUBSCRIPTION_ID',
                     clientIdVariable: 'ARM_CLIENT_ID',
                     clientSecretVariable: 'ARM_CLIENT_SECRET',
                     tenantIdVariable: 'ARM_TENANT_ID'
-                ), string(credentialsId: 'access_key', variable: 'ARM_ACCESS_KEY')]) {
+                ), string(credentialsId: 'prj1st1', variable: 'ARM_ACCESS_KEY')]) {
 
                         sh """
                         echo "Applying the plan"
