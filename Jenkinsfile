@@ -11,7 +11,6 @@ pipeline{
     stages {
        stage('Checkout') {
             steps {
-               sh label: '', script: '''#!/bin/bash
                    checkout scmGit(branches: [[name: '*/main']], browser: github('https://github.com/chandugitlearn/PRJ1.git'), extensions: [], userRemoteConfigs: [[url: 'https://github.com/chandugitlearn/PRJ1.git']]) 
                 '''
             }
